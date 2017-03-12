@@ -1,0 +1,21 @@
+{
+    "version":"0.1.0",
+    "command":"gulp",
+    "isShellCommand": true,
+    "tasks": [
+        {
+            "taskName": "scripts",
+            "args":[],
+            "isBuildCommand": true,
+            "showOutput": "always",
+            "problemMatcher": ["$tsc"]
+        },
+        {
+            "taskName": "watch",
+            "args":[],
+            "isBuildCommand": true,
+            "showOutput": "always",
+            "problemMatcher":["$tsc"]
+        }
+    ]
+}
