@@ -1,4 +1,5 @@
 import { IUserModel } from './IUserModel';
+import {SiteRole} from './SiteRole';
 
 export class UserModel {
     private _userModel: IUserModel;
@@ -36,5 +37,22 @@ export class UserModel {
 
     get company(): string {
         return this._userModel.company;
+    }
+
+    get division(): string {
+        return this._userModel.division;
+    }
+
+    get department(): string {
+        return this._userModel.department;
+    }
+
+    get designation(): string {
+        return this._userModel.designation;
+    }
+
+    get siteRole():SiteRole
+    {
+        return this._userModel.siteRole;
     }
 }
