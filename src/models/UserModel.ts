@@ -55,4 +55,8 @@ export class UserModel {
     {
         return this._userModel.siteRole;
     }
+
+    public get emailAddress():string{
+        return this._userModel.emailAddress;
+    }
 }

@@ -7,7 +7,7 @@ export class UserRoutes
     private router: express.Router;
     private _userController:UserController;
 
-    cosntructor(app:express.Application)
+    constructor(app:express.Application)
     {
         this.app = app;
         this.router = app._router;
@@ -15,7 +15,9 @@ export class UserRoutes
     }
     get routes():express.Router
     {
-        this.router.get('/users',this._userController.retrieve);
+        this.router.get('/allUsers',this._userController.retrieve);
+
+        console.log('User Routes have been Setup!');
 
         return this.router;
     }

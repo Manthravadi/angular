@@ -8,10 +8,8 @@ export class BaseRoutes
     {
         this.app = app;
     }
-    get routes():express.Application
+    routes():void
     {
-        this.app.use("/", new UserRoutes().routes);
-
-        return this.app;
+        this.app.use("/api/user", new UserRoutes(this.app).routes);
     }
 }

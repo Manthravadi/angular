@@ -5,7 +5,7 @@ import { BaseController } from './BaseController';
 
 export class UserController extends BaseController<IUserModel, UserBusiness>
 {
-    createBusinessObject():UserBusiness
+    protected createBusinessObject():UserBusiness
     {
         return new UserBusiness();
     }

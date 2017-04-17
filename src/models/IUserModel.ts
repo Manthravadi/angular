@@ -3,6 +3,7 @@ import {SiteRole} from './SiteRole';
 
 export interface IUserModel extends mongoose.Document {
     username: string;
+    emailAddress:string;
     firstName: string;
     middleName: string;
     lastName: string;

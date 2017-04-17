@@ -10,15 +10,15 @@ export class DataAccess {
     }
 
     static connect(): mongoose.MongooseThenable {
-        if (this.mongooseInstance) {
-            return this.mongooseInstance;
+        if (DataAccess.mongooseInstance) {
+            return DataAccess.mongooseInstance;
         }
-        this.mongooseConnection = mongoose.connection;
-        this.mongooseConnection.once("open", () => {
+        DataAccess.mongooseConnection = mongoose.connection;
+        DataAccess.mongooseConnection.once("open", () => {
             console.log('Connected to MongoDB');
         });
-        this.mongooseInstance = mongoose.connect(Constants.DB_CONNECTION_STRING);
-        return this.mongooseInstance;
+        DataAccess.mongooseInstance = mongoose.connect(Constants.DB_CONNECTION_STRING);
+        return DataAccess.mongooseInstance;
 
     }
 }
