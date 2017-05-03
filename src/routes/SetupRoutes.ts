@@ -1,5 +1,6 @@
 import * as express from 'express';
 import {UserRoutes} from './UserRoutes';
+import {IndexRoutes} from './IndexRoutes';
 
 export class SetupRoutes{
     private _express:express.Application;
@@ -9,7 +10,8 @@ export class SetupRoutes{
     }
 
     private setup():void{
-        this._express.use('/api/users/', new UserRoutes(this._express).routes);
+        this._express.use('/api/users', new UserRoutes(this._express).routes);
         //And so on ...
+        this._express.use('/', new IndexRoutes(this._express).routes);
     }
 }
